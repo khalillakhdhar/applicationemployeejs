@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>
+            setInterval() method
+        </title>
+    </head>
+    <body>
+        <h1>
+            Hello World
+        </h1>
+        <h3>
+            Exemple de setInterval()
+        </h3>
+        <p>
+            Changement d’arriére plan toute les 200 milliseconds.
+        </p>
+        <script>
+            var var1 = setInterval(color, 200);
+            function color() {
+                var var2 = document.body;
+                var2.style.backgroundColor = var2.style.backgroundColor == "lightblue" ? "lightgreen" : "lightblue";
+                console.log("changed");
+            }
+        </script>
+    </body>
+</html>
