@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script>
+        var table=["se réveiller","quitter le lit"]; // initialisation
+function adddata()
+{
+    done=document.getElementById("todo").value;
+    table.push(done); // ajout d'un élément
+    console.log(table);
+    loadTable(); // actualiser le tableau HTML
+    document.getElementById("todo").value="";
+}
+function loadTable()
+{
+    
+    var datas="<ul>";
+        for(let u of table){
+           datas+="<li>"+u+"</li>";
+       };
+       datas+="</ul>";
+       console.log(datas);
+       document.getElementById("ls").innerHTML=datas;
+       
+}
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="loadTable()">
+    mission:<input placeholder="todo" type="text" name="ms" id="todo">&nbsp;&nbsp;<button class="btn btn-primary" onclick="adddata()">ajouter</button>
+    <div id="ls"></div>
+    
+</body>
+</html>

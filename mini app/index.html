@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function saywelcome()
+        {
+            document.getElementById("welcome").innerHTML="<h2>Bienvenu</h2>"
+        }
+        function ask()
+        {
+            if(confirm("allez à TODO")) 
+            //boolean (true si onclick sur ok et false onclick sur cancel)
+            window.location.replace("todo.html");
+        }
+        function loader()
+        {
+            var x=setTimeout(saywelcome,2000) // pour afficher le message une seule fois
+            var a=setInterval(ask,4000);
+
+        }
+    </script>
+</head>
+<body onload="loader()">
+    <div id="welcome"></div>
+
+</body>
+</html>
